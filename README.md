@@ -18,8 +18,7 @@ I'm on a mission to build a stronger foundation in **low-level programming** and
 | Singly Linked List   | ✅ Implemented |
 | Doubly Linked List   | ✅ Implemented |
 | Stack (Array/List)   | ✅ Implemented |
-| Queue (Array/List)   | ⏳ In Progress |
-| Circular Queue       | ⏳ In Progress |
+| Circular Queue       | ✅ Implemented |
 | Priority Queue       | ⏳ In Progress |
 | Binary Search Tree   | ⏳ In Progress |
 | Heap (Min/Max)       | 🕐 Planned |
