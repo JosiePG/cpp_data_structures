@@ -20,7 +20,7 @@ I'm on a mission to build a stronger foundation in **low-level programming** and
 | Stack (Array/List)   | ✅ Implemented |
 | Circular Queue       | ✅ Implemented |
 | Priority Queue       | ⏳ In Progress |
-| Binary Search Tree   | ⏳ In Progress |
+| Binary Search Tree   | ✅ Implemented  |
 | Heap (Min/Max)       | 🕐 Planned |
 | Graph     | 🕐 Planned |
 | Hash Map   | 🕐 Planned |
