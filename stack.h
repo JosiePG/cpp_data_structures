@@ -2,21 +2,32 @@
 #define STACK_H
 #include <iostream>
 
-class Stack{
+struct TreeNode{
+    int val;
+    TreeNode *left_child;
+    TreeNode *right_child;
+
+    TreeNode(int val) : val(val) , left_child(nullptr) , right_child(nullptr) {}
+
+};
+
+class TreeNodeStack{
     int top;
-    inline const static int MaxSize = 4;
+    inline const static int MaxSize = 10000;
     int currentSize;
-    int array[MaxSize];
+    TreeNode * array[MaxSize];
     public:
-        Stack() : top(-1) , currentSize(0) {}
+        TreeNodeStack() : top(-1) , currentSize(0) {}
 
         int getCurrentSize(){
             return currentSize;
         }
 
-        bool push(auto val){
+        bool push(TreeNode * val){
             if (top >= MaxSize-1){
                 std::cout << "Stack Overflow" << std::endl;
+                return false;
+            }else if(val == nullptr){
                 return false;
             }else{
                 array[++top] = val;
@@ -25,27 +36,24 @@ class Stack{
             }
         }
 
-        void pop(){
+        TreeNode * pop(){
             if(top != -1){ // if stack not empty
 
-                array[top--];
                 currentSize--;
-                return;
+                return array[top--];;
 
             }else{
                 // stack is empty
                 std::cout << "Stack Underflow" << std::endl;
-                return;
+                return nullptr;
             }
 
         }
-        int peek(){
+        void peek(){
             if(top==-1){
                 std::cout << "Stack is empty" <<std::endl;
-                return -1;
             }else{
-                std::cout <<"Top of stack: "<< array[top] <<std::endl;
-                return array[top];
+                std::cout <<"Top of stack: "<< array[top]->val <<std::endl;
             }
         }
 
